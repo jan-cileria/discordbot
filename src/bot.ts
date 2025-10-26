@@ -1,8 +1,13 @@
 import { Client, GatewayIntentBits, Events, Partials, Message } from 'discord.js';
 import dotenv from 'dotenv';
+import express, { Request, Response } from 'express';
 
 // Load environment variables from .env file
 dotenv.config();
+
+// Create Express server
+const app = express();
+app.use(express.json());
 
 const client = new Client({
   intents: [
@@ -52,3 +57,17 @@ if (!token) {
 
 client.login(token);
 
+// Express route: POST /message
+app.post('/message', (req: Request, res: Response) => {
+  const { userId, message } = req.body;
+  
+  console.log(`📨 Received POST /message - userId: ${userId}, message: ${message}`);
+  
+  res.json({ errorId: 0 });
+});
+
+// Start Express server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 Express server running on port ${PORT}`);
+});
