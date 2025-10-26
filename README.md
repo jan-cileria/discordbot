@@ -34,9 +34,9 @@ A simple Discord bot built with Node.js and TypeScript that responds to direct m
 npm install
 ```
 
-2. Create a `.env` file in the root directory:
+2. Create a `.env` file in the root directory (you can copy from `.env.example`):
 ```
-DISCORD_TOKEN=your_discord_bot_token_here
+DISCORD_BOT_TOKEN=your_discord_bot_token_here
 ```
 
 Replace `your_discord_bot_token_here` with your actual Discord bot token.
@@ -81,7 +81,7 @@ The bot listens for direct messages and automatically replies with "Hallo World"
 ## Troubleshooting
 
 - **Bot doesn't respond to DMs**: Make sure the bot has the necessary intents enabled in the Discord Developer Portal
-- **"DISCORD_TOKEN is not defined" error**: Check that your `.env` file exists and contains a valid token
+- **"DISCORD_BOT_TOKEN is not defined" error**: Check that your `.env` file exists and contains a valid token
 - **Bot can't read messages**: Ensure you've enabled the MESSAGE CONTENT INTENT in the Discord Developer Portal
 
 ## License

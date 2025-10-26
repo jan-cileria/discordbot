@@ -1,5 +1,8 @@
 import { Client, GatewayIntentBits, Events, Partials, Message } from 'discord.js';
-import config from './config.json';
+import dotenv from 'dotenv';
+
+// Load environment variables from .env file
+dotenv.config();
 
 const client = new Client({
   intents: [
@@ -40,10 +43,10 @@ client.on(Events.MessageCreate, async (message: Message) => {
   }
 });
 
-const token = config.DISCORD_BOT_TOKEN;
+const token = process.env.DISCORD_BOT_TOKEN;
 
 if (!token) {
-  console.error('❌ Error: DISCORD_TOKEN is not defined in .env file');
+  console.error('❌ Error: DISCORD_BOT_TOKEN is not defined in .env file');
   process.exit(1);
 }
 
