@@ -24,13 +24,13 @@ client.once(Events.ClientReady, (c) => {
 });
 
 client.on(Events.MessageCreate, async (message: Message) => {
-  if (message.author.bot) return; // this point is never reached!
+  if (message.author.bot) return; 
 
   if (message.channel.isDMBased()) {
     console.log(`📩 Received DM from ${message.author.tag}: ${message.content}`);
     
     try {
-      await message.reply('Hallo World');
+      // await message.reply('Hallo World');
       console.log(`✉️ Replied to ${message.author.tag}`);
     } catch (error) {
       console.error('❌ Error sending reply:', error);
@@ -40,7 +40,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
     console.log(`💬 Mentioned in channel by ${message.author.tag}: ${message.content}`);
     
     try {
-      await message.reply('Hallo World');
+      // await message.reply('Hallo World');
       console.log(`✉️ Replied to ${message.author.tag} in channel`);
     } catch (error) {
       console.error('❌ Error sending reply:', error);
