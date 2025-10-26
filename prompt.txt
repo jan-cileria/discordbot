@@ -1,0 +1,1 @@
+Create a basic NodeJS TypeScript example of a Discord chatbot that receives and answers direct messages with "Hallo World".
