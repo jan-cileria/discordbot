@@ -4,7 +4,7 @@ A simple Discord bot built with Node.js and TypeScript that responds to direct m
 
 ## Features
 
-- Responds to all direct messages with "Hallo World"
+- Forwards incoming Discord WebSocket messages to HTTP
 - Built with TypeScript for type safety
 - Uses discord.js v14
 
