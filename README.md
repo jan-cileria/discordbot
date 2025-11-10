@@ -1,6 +1,6 @@
 # Discord Bot - Direct Message Responder
 
-A simple Discord bot built with Node.js and TypeScript that responds to direct messages with "Hallo World".
+Forwards incoming Discord WebSocket messages to HTTP
 
 ## Features
 
